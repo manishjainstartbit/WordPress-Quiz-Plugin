@@ -1,0 +1,201 @@
+.msq-popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+}
+.msq-popup {
+    background: #fff; padding: 100px; max-width: 800px; width: 90%;
+    border-radius: 8px; position: relative;
+}
+.msq-question-section {
+    width: 80%;
+    margin: auto;
+}
+.msq-close-btn {
+    position: absolute; top: 10px; right: 10px;text-decoration: underline;
+    background: transparent; border: none; font-size: 20px; color: #284861;
+	text-transform: uppercase;
+}
+.msq-ans {
+    display: inline-block; margin: 10px; padding: 10px 20px;
+    font-size: 16px; cursor: pointer;
+    background: transparent linear-gradient(226deg, #00677A 0%, #234B65 100%) 0% 0% no-repeat padding-box;
+    border-radius: 29px;
+    color: #fff; 
+    border: none;
+}
+p.msq-title-t-or-f {
+    color: #1991b5;
+    font-weight: 600;
+}
+
+
+/*  print pdf css   */
+
+/* Hide the print result container on screen */
+.msq-print-only {
+  display: none;
+}
+
+/* Print style: only show .msq-print-only */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .msq-print-only,
+  .msq-print-only * {
+    visibility: visible !important;
+  }
+
+  .msq-print-only {
+    display: block !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.6;
+    z-index: 9999;
+  }
+
+  .msq-print-only h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+  }
+
+  .msq-review-item {
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .msq-review-item span,
+  .msq-review-item small {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .msq-review-item small {
+    font-style: italic;
+    color: #555;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}
+
+
+.msq-progress-container {
+  margin-bottom: 20px;
+}
+
+.msq-progress-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.msq-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.msq-progress-fill {
+  height: 100%;
+  background-color: #F29909; /* Orange */
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.msq-question-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.ans-text {
+    color: #1991B5;
+}
+p.ans-result {
+    color: #F29909;
+}
+.msq-next {
+    background: #F29909;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex
+;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+button.msq-next:hover {
+    background-color: #e88b00;
+}
+button.msq-next:hover .arrow {
+    transform: translateX(4px);
+}
+button.msq-next .arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+
+/* result slide css    */
+
+
+
+.msq-final-screen {
+  text-align: left;
+  padding: 30px 20px;
+}
+
+.msq-final-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2d3d;
+}
+
+.msq-score-line {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1f2d3d;
+}
+
+.msq-score-line strong {
+  font-weight: bold;
+}
+
+.msq-final-subtext {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.msq-print-btn {
+  padding: 10px 20px;
+  background: transparent linear-gradient(226deg, #00677A 0%, #234B65 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 29px;
+  font-size: 16px;
+  cursor: pointer;
+}
